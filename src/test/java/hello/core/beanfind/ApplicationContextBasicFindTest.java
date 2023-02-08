@@ -49,4 +49,5 @@ public class ApplicationContextBasicFindTest {
 
         //람다함수로 오른쪽 ac.getBean이 NoSuchBeanDefinitionException이 터져야 테스트 성공
     }
+
 }
