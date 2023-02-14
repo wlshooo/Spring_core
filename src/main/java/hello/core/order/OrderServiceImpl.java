@@ -6,10 +6,12 @@ import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
 
@@ -21,7 +23,7 @@ public class OrderServiceImpl implements OrderService{
 
     @Autowired
     public OrderServiceImpl(DiscountPolicy discountPolicy, MemberRepository memberRepository) {
-        this.discountPolicy = discountPolicy;
+        this.discountPolicy = discountPolicy; //롬복이 대신 만들어줌 @RequiredArgsConstructor
         this.memberRepository = memberRepository;
     }
 
